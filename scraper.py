@@ -253,8 +253,6 @@ def main() -> None:
     
     # Step 2: For each available date, extract HTML download links.
     available_dates = load_available_dates(AVAILABLE_DATES_FILE)
-    # For testing, use only a subset:
-    available_dates = available_dates[:10]
     
     results: Dict[str, List[str]] = {}
     for date in available_dates:
