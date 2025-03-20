@@ -208,7 +208,7 @@ def parse_debate_page(url: str, scraper: CloudScraper) -> Optional[List[Dict[str
                     primary = speaker_a.find("div", class_="primary-text")
                     secondary = speaker_a.find("div", class_="secondary-text")
                     if primary and secondary:
-                        speaker_name = primary.get_text(strip=True) + " " + secondary.get_text(strip=True)
+                        speaker_name = primary.get_text(strip=True) + "\n" + secondary.get_text(strip=True)
                     else:
                         speaker_name = speaker_a.get_text(strip=True)
                     speaker_name = speaker_name.strip()
